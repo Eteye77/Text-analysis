@@ -40,20 +40,22 @@ def testMsg(passed):
        return 'Test Passed'
     else :
        return 'Test Failed'
-
 print("Constructor: ")
+
 try:
     samplePassage = analysedText("Lorem ipsum dolor! diam amet, consetetur Lorem magna. sed diam nonumy eirmod tempor. diam et labore? et diam magna. et diam amet.")
     print(testMsg(samplePassage.fmtText == "lorem ipsum dolor diam amet consetetur lorem magna sed diam nonumy eirmod tempor diam et labore et diam magna et diam amet"))
 except:
     print("Error detected. Recheck your function " )
 print("freqAll: ")
+
 try:
     wordMap = samplePassage.freqAll()
     print(testMsg(wordMap==sampleMap))
 except:
     print("Error detected. Recheck your function " )
 print("freqOf: ")
+
 try:
     passed = True
     for word in sampleMap:
